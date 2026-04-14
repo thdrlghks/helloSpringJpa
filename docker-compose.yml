@@ -95,11 +95,8 @@ services:
 
     environment:
       # Java 옵션: 메모리, 인코딩 설정
-      JAVA_OPTS: >-
-        -Xmx512m
-        -Xms256m
-        -Dfile.encoding=UTF-8
-        -Duser.timezone=Asia/Seoul
+      - DB_HOST=mysql
+      - JAVA_OPTS=-Xmx512m -Xms256m -Dfile.encoding=UTF-8 -Duser.timezone=Asia/Seoul
 
 # 데이터 삭제 방법:
 #   rm -rf ./mysql-data    (폴더째 삭제하면 DB 초기화)
