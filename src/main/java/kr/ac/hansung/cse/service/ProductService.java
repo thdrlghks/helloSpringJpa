@@ -96,6 +96,10 @@ public class ProductService {
         return productRepository.findByCategoryId(categoryId);
     }
 
+    public List<Product> searchByNameAndCategory(String keyword, Long categoryId) {
+        return productRepository.findByNameContainingAndCategoryId(keyword, categoryId);
+    }
+
     /**
      * 새 상품 등록
      *
